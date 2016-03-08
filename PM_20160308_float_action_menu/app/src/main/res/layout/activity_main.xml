@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.wgbn.pm_20160308_float_action_menu.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        fab:fab_addButtonColorNormal="@color/pink"
+        fab:fab_addButtonColorPressed="@color/pink_pressed"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_title="Label on the right"
+            fab:fab_icon="@android:drawable/ic_menu_share"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_title="Another one on the right"
+            fab:fab_icon="@android:drawable/ic_menu_send"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>
