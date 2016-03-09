@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Criando Atividades</string>
+    <string name="informe_nome">Informe o nome</string>
+    <string name="informe_idade">Informe a idade</string>
+    <string name="btn_carregar1">Enviar via Intent</string>
+    <string name="btn_carregar2">Enviar via Bundle</string>
+    <string name="btn_carregar3">Enviar via Serializable</string>
+    <string name="title_activity_segunda_atividade">SegundaAtividade</string>
+</resources>
