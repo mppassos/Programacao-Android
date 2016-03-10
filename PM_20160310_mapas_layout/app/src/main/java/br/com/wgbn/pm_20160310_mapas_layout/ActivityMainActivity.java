@@ -51,7 +51,7 @@ public class ActivityMainActivity extends AppCompatActivity {
 
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
-            setTitle("Mapa");
+            setTitle("Cadê? Vagas");
         } else {
 
             Log.e("MainActivity", "Error in creating fragment");

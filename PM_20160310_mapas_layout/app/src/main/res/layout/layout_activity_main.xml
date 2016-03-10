@@ -91,7 +91,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="#aaffffff"
+        android:background="@color/colorAccent"
+        app:titleTextColor="@android:color/white"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Light" >
