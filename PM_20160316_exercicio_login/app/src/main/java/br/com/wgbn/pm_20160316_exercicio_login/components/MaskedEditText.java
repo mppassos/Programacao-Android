@@ -83,9 +83,11 @@ public class MaskedEditText extends EditText {
                         texto = texto.substring(0, 3) + "." +
                                 texto.substring(3);
                     }*/
-                    if (texto.length() == 11){
-                        texto = texto.replaceFirst("(.{3})(.{3})(.{3})(.{2})", "$1.$2.$3-$4");
+                    if (texto.length() == qtdeChars){
+                        //texto = texto.replaceFirst("(.{3})(.{3})(.{3})(.{2})", "$1.$2.$3-$4");
+                        texto = texto.replaceFirst(criaRegEx(), criaReplace());
                     }
+
                     isUpdating = true;
                     setText(texto);
                     setSelection(getText().length());
@@ -99,14 +101,31 @@ public class MaskedEditText extends EditText {
         });
     }
 
-    private String aplicaMascara(String texto){
-        for (int i = this.posicoes.size(); i > 0; i--){
-            if (texto.length() > this.posicoes.get(i).getPosicao()){
-                for (int j = 0; j < texto.length(); j++){
+    private String criaRegEx(){
+        String regEx = "";
+        for (int i = 0; i < this.posicoes.size(); i++)
+            if (i == 0)
+                regEx += "(.{"+String.valueOf(this.posicoes.get(i).getPosicao())+"})";
+            else
+                regEx += "(.{"+String.valueOf(this.posicoes.get(i).getPosicao() - this.posicoes.get(i-1).getPosicao() - 1)+"})";
 
-                }
-            }
-        }
+        if (this.posicoes.get(this.posicoes.size()-1).getPosicao() < qtdeChars)
+            regEx += "(.{"+(qtdeChars - this.posicoes.get(this.posicoes.size()-1).getPosicao())+"})";
+
+        Log.v("wgbn", "RegExp: "+regEx);
+        return regEx;
+    }
+
+    private String criaReplace(){
+        String replace = "";
+        for (int i = 0; i < this.posicoes.size(); i++)
+            replace += "$"+(i+1)+this.posicoes.get(i).getCaracter();
+
+        if (this.posicoes.get(this.posicoes.size()-1).getPosicao() < qtdeChars)
+            replace += "$"+(this.posicoes.size() + 1);
+
+        Log.v("wgbn", "replaces: "+replace);
+        return replace;
     }
 
     private String carregaMascara(){
@@ -114,19 +133,16 @@ public class MaskedEditText extends EditText {
         String retorno = "000.000.000-00";
         ArrayList<Posicao> posicoes = new ArrayList<Posicao>();
 
-        if (atributos.getAttributeCount() > 0){
-            for (int i = 0; i < atributos.getAttributeCount(); i++){
-                if (atributos.getAttributeName(i) == "mask")
+        if (atributos.getAttributeCount() > 0)
+            for (int i = 0; i < atributos.getAttributeCount(); i++)
+                if (atributos.getAttributeName(i).equals("mask"))
                     retorno = atributos.getAttributeValue(i);
-            }
-        }
 
-        for (int i = 0; i < retorno.length(); i++){
+        for (int i = 0; i < retorno.length(); i++)
             if ((retorno.charAt(i) >= '0' && retorno.charAt(i) <= '9'))
                 qtde++;
             else
                 posicoes.add(new Posicao(retorno.charAt(i), i));
-        }
 
         this.posicoes = posicoes;
         this.qtdeChars = qtde;
