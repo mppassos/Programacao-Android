@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class MaskedEditText extends EditText {
 
     private AttributeSet atributos;
-    private String mascara;
     private int qtdeChars;
     private ArrayList<Posicao> posicoes;
 
@@ -42,13 +41,9 @@ public class MaskedEditText extends EditText {
         init();
     }
 
-    public void setMascara(String mascara){
-        this.mascara = mascara;
-    }
-
     private void init(){
 
-        mascara = carregaMascara();
+        carregaMascara();
 
         this.addTextChangedListener(new TextWatcher() {
             boolean isUpdating;
@@ -70,22 +65,11 @@ public class MaskedEditText extends EditText {
                         .replaceAll("[-]", "");
 
                 if (count > before) {
-                    /*if (texto.length() > 9) {
-                        texto = texto.substring(0, 3) + "." +
-                                texto.substring(3, 6) + "." +
-                                texto.substring(6, 9) + "-" +
-                                texto.substring(9);
-                    } else if (texto.length() > 6) {
-                        texto = texto.substring(0, 3) + "." +
-                                texto.substring(3, 6) + "." +
-                                texto.substring(6);
-                    } else if (texto.length() > 3) {
-                        texto = texto.substring(0, 3) + "." +
-                                texto.substring(3);
-                    }*/
-                    if (texto.length() == 11){
-                        texto = texto.replaceFirst("(.{3})(.{3})(.{3})(.{2})", "$1.$2.$3-$4");
+                    if (texto.length() == qtdeChars){
+                        //texto = texto.replaceFirst("(.{3})(.{3})(.{3})(.{2})", "$1.$2.$3-$4");
+                        texto = texto.replaceFirst(criaRegEx(), criaReplace());
                     }
+
                     isUpdating = true;
                     setText(texto);
                     setSelection(getText().length());
@@ -99,40 +83,69 @@ public class MaskedEditText extends EditText {
         });
     }
 
-    private String aplicaMascara(String texto){
-        for (int i = this.posicoes.size(); i > 0; i--){
-            if (texto.length() > this.posicoes.get(i).getPosicao()){
-                for (int j = 0; j < texto.length(); j++){
+    /**
+     * Cria uma string com a expressão regular passada como atributo no xml
+     * @return String com a RegExp
+     */
+    private String criaRegEx(){
+        String regEx = "";
+        for (int i = 0; i < this.posicoes.size(); i++)
+            if (i == 0)
+                regEx += "(.{"+String.valueOf(this.posicoes.get(i).getPosicao())+"})";
+            else
+                regEx += "(.{"+String.valueOf(this.posicoes.get(i).getPosicao() - this.posicoes.get(i-1).getPosicao() - 1)+"})";
 
-                }
-            }
-        }
+        if (this.posicoes.get(this.posicoes.size()-1).getPosicao() < qtdeChars)
+            regEx += "(.{"+(qtdeChars - this.posicoes.get(this.posicoes.size()-1).getPosicao())+"})";
+
+        Log.v("wgbn", "RegExp: "+regEx);
+        return regEx;
     }
 
-    private String carregaMascara(){
+    /**
+     * Cria a string com as posições do replacement da expressão regular
+     * @return String replacement
+     */
+    private String criaReplace(){
+        String replace = "";
+        for (int i = 0; i < this.posicoes.size(); i++)
+            replace += "$"+(i+1)+this.posicoes.get(i).getCaracter();
+
+        if (this.posicoes.get(this.posicoes.size()-1).getPosicao() < qtdeChars)
+            replace += "$"+(this.posicoes.size() + 1);
+
+        Log.v("wgbn", "replaces: "+replace);
+        return replace;
+    }
+
+    /**
+     * Carrega a máscara vinda do xml
+     * Se não for definida uma máscara via xml, assume-se o padrão de CPF
+     * @return String máscara
+     */
+    private void carregaMascara(){
         int qtde = 0;
         String retorno = "000.000.000-00";
         ArrayList<Posicao> posicoes = new ArrayList<Posicao>();
 
-        if (atributos.getAttributeCount() > 0){
-            for (int i = 0; i < atributos.getAttributeCount(); i++){
-                if (atributos.getAttributeName(i) == "mask")
-                    retorno = atributos.getAttributeValue(i);
-            }
-        }
+            if (atributos.getAttributeCount() > 0)
+                for (int i = 0; i < atributos.getAttributeCount(); i++)
+                    if (atributos.getAttributeName(i).equals("mask"))
+                        retorno = atributos.getAttributeValue(i);
 
-        for (int i = 0; i < retorno.length(); i++){
+        for (int i = 0; i < retorno.length(); i++)
             if ((retorno.charAt(i) >= '0' && retorno.charAt(i) <= '9'))
                 qtde++;
             else
                 posicoes.add(new Posicao(retorno.charAt(i), i));
-        }
 
         this.posicoes = posicoes;
         this.qtdeChars = qtde;
-        return retorno;
     }
 
+    /**
+     * POJO das posições da máscara
+     */
     private class Posicao {
         private int posicao;
         private char caracter;

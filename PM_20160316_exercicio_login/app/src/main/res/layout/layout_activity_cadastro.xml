@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:inputType="number"
             mask="000.000.000-00"
-            android:id="@+id/cpf"/>
+            android:id="@+id/cpf"></br.com.wgbn.pm_20160316_exercicio_login.components.MaskedEditText>
     </LinearLayout>
 
     <Button
