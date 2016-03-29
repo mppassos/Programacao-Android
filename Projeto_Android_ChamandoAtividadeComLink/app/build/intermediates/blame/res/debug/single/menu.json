@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_ChamandoAtividadeComLink/app/build/intermediates/res/merged/debug/menu/atividade_chamada.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_ChamandoAtividadeComLink/app/src/main/res/menu/atividade_chamada.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_ChamandoAtividadeComLink/app/build/intermediates/res/merged/debug/menu/chamando_activitie.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_ChamandoAtividadeComLink/app/src/main/res/menu/chamando_activitie.xml"
+    }
+]

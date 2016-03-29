@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Work Proof</string>
+    <string name="btnCadastrar">Add Client</string>
+    <string name="btnBuscar">Search Client</string>
+    <string name="btnListar">List Clients</string>
+    <string name="btnSair">Exit</string>
+    <string name="txtNome">Client Name</string>
+    <string name="txtCpf">Client Document</string>
+    <string name="txtTelefone">Client Contact Phone</string>
+    <string name="txtEndereco">Client Address</string>
+    <string name="txtSexo">Client Gender</string>
+    <string name="rdSexoM">Male</string>
+    <string name="rdSexoF">Female</string>
+    <string name="txtAtivo">Client Status</string>
+    <string name="onoffAtivo">Active</string>
+    <string name="btnSalvar">Save</string>
+    <string name="btnCancelar">Cancel</string>
+</resources>
