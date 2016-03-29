@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Trabalho Prova</string>
+    <string name="app_name">Programação Web</string>
     <string name="btnCadastrar">Cad. Cliente</string>
     <string name="btnBuscar">Buscar Cliente</string>
     <string name="btnListar">Listar Cliente</string>
@@ -16,4 +16,10 @@
     <string name="onoffAtivo">Ativo</string>
     <string name="btnSalvar">Salvar</string>
     <string name="btnCancelar">Cancelar</string>
+    <string name="tituloCadastrar">Cadastro de Cliente</string>
+    <string name="tituloListar">Clientes</string>
+    <string name="tituloBuscar">Buscar Clientes</string>
+    <string name="snackDel">SIM</string>
+    <string name="snackDeltext">Excluir</string>
+    <string name="txtBuscarCpf">Buscar por CPF</string>
 </resources>

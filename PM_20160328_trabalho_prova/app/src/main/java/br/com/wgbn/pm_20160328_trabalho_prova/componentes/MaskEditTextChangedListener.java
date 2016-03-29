@@ -5,11 +5,9 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import java.util.HashSet;
 import java.util.Set;
-import br.com.wgbn.pm_20160328_trabalho_prova.Utils;
+import br.com.wgbn.pm_20160328_trabalho_prova.utils.Utils;
 
 public class MaskEditTextChangedListener implements TextWatcher{
-
-    private static MaskEditTextChangedListener instance;
 
     private String mMask;
     private EditText mEditText;

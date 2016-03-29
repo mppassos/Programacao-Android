@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///media/walter/ARQUIVOS/workspace/android/Programacao-Android/PM_20160309_obtendo_dados/PM_20160309_obtendo_dados.iml" filepath="/media/walter/ARQUIVOS/workspace/android/Programacao-Android/PM_20160309_obtendo_dados/PM_20160309_obtendo_dados.iml" />
-      <module fileurl="file:///media/walter/ARQUIVOS/workspace/android/Programacao-Android/PM_20160309_obtendo_dados/app/app.iml" filepath="/media/walter/ARQUIVOS/workspace/android/Programacao-Android/PM_20160309_obtendo_dados/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PM_20160309_obtendo_dados.iml" filepath="$PROJECT_DIR$/PM_20160309_obtendo_dados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>

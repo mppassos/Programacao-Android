@@ -3,18 +3,40 @@ package br.com.wgbn.pm_20160328_trabalho_prova.pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ClientePojo implements Parcelable {
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
 
+import java.util.List;
+
+@Table(name = "clientes")
+public class ClientePojo extends Model implements Parcelable {
+
+    @Column(index = true)
     private String  cpf;
+
+    @Column
     private String  nome;
+
+    @Column
     private String  endereco;
+
+    @Column
     private String  telefone;
+
+    @Column
     private char    sexo;
+
+    @Column
     private boolean ativo;
 
-    public ClientePojo(){}
+    public ClientePojo(){
+        super();
+    }
 
     public ClientePojo(boolean ativo, String cpf, String endereco, String nome, char sexo, String telefone) {
+        super();
         this.ativo = ativo;
         this.cpf = cpf;
         this.endereco = endereco;
@@ -104,4 +126,18 @@ public class ClientePojo implements Parcelable {
             return new ClientePojo[size];
         }
     };
+
+    public static List<ClientePojo> getAll() {
+        return new Select()
+                .from(ClientePojo.class)
+                .orderBy("nome ASC")
+                .execute();
+    }
+
+    public static ClientePojo getByCpf(String cpf) {
+        return (ClientePojo) new Select()
+                .from(ClientePojo.class)
+                .where("cpf = ?", cpf)
+                .executeSingle();
+    }
 }

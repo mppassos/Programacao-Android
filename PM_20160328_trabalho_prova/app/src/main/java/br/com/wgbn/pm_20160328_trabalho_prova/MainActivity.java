@@ -23,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(buscar, 2);
     }
 
-    public void listarClick(View v){}
+    public void listarClick(View v){
+        Intent listar = new Intent(this, ListarActivity.class);
+        startActivityForResult(listar, 3);
+    }
 
-    public void sairClick(View v){}
+    public void sairClick(View v){
+        finish();
+    }
 }
