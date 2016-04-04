@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_UsandoListViewComArrayAdapter/app/build/intermediates/res/merged/debug/menu/acao_atividade.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_UsandoListViewComArrayAdapter/app/src/main/res/menu/acao_atividade.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_UsandoListViewComArrayAdapter/app/build/intermediates/res/merged/debug/menu/list_view_com_array_adapter.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_UsandoListViewComArrayAdapter/app/src/main/res/menu/list_view_com_array_adapter.xml"
+    }
+]
