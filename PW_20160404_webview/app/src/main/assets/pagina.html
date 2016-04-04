@@ -1,0 +1,17 @@
+<html>
+<header>
+    <script type="text/javascript">
+        function showToast(s, t){
+            window.senai.showToast(s,t);
+        }
+    </script>
+</header>
+<body>
+<h1>HTML</h1>
+<form name="meuForm">
+    Nome: <input type="text" name="nome"/><br>
+    Idade: <input type="text" name="idade"/><br>
+    <input type="button" onclick="showToast(nome.value, idade.value)" value="enviar"/>
+</form>
+</body>
+</html>
