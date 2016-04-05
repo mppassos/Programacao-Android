@@ -16,6 +16,18 @@ public class Hotel implements Parcelable {
         this.nome = nome;
     }
 
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public float getEstrelas() {
+        return estrelas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public String toString() {
         return nome;
