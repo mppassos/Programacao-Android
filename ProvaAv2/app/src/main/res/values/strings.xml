@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Prova Av2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="btnCad">Cadastrar Série</string>
+    <string name="btnLista">Listar Séries</string>
+    <string name="usuario">Senai</string>
+    <string name="email">senai@fieb.org.br</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
