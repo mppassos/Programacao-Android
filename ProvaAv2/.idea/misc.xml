@@ -35,16 +35,16 @@
             <id />
           </State>
           <State>
-            <id>Groovy</id>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
           </State>
           <State>
             <id>Java</id>
           </State>
           <State>
-            <id>Potentially confusing code constructsGroovy</id>
-          </State>
-          <State>
-            <id>Threading issuesJava</id>
+            <id>Java language level migration aidsJava</id>
           </State>
         </expanded-state>
         <selected-state>

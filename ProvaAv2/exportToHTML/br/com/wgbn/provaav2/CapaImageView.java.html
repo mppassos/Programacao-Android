@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>CapaImageView.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(98,151,85); font-style: italic; }
+.s3 { color: rgb(128,128,128); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+CapaImageView.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">br.com.wgbn.provaav2</span><span class="s0">;</span><span class="s1"> 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context</span><span class="s0">;</span><span class="s1"> 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.drawable.Drawable</span><span class="s0">;</span><span class="s1"> 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.util.AttributeSet</span><span class="s0">;</span><span class="s1"> 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span><span class="s1"> 
+<a name="l7"><span class="ln">7    </span></a> 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">com.makeramen.roundedimageview.RoundedImageView</span><span class="s0">;</span><span class="s1"> 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s2">/** 
+<a name="l11"><span class="ln">11   </span></a> * Classe que extende do componente RoundedImageView para redimencionar 
+<a name="l12"><span class="ln">12   </span></a> * automaticamente a imagem para caber dentro do CardView. 
+<a name="l13"><span class="ln">13   </span></a> * Essa classe foi retirada do Stackoverflow: 
+<a name="l14"><span class="ln">14   </span></a> * http://stackoverflow.com/questions/13992535/android-imageview-scale-smaller-image-to-width-with-flexible-height-without-crop 
+<a name="l15"><span class="ln">15   </span></a> */</span><span class="s1"> 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s0">public class </span><span class="s1">CapaImageView </span><span class="s0">extends </span><span class="s1">RoundedImageView { 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">public </span><span class="s1">CapaImageView(</span><span class="s0">final </span><span class="s1">Context context</span><span class="s0">, final </span><span class="s1">AttributeSet attrs) { 
+<a name="l19"><span class="ln">19   </span></a>        </span><span class="s0">super</span><span class="s1">(context</span><span class="s0">, </span><span class="s1">attrs)</span><span class="s0">;</span><span class="s1"> 
+<a name="l20"><span class="ln">20   </span></a>    } 
+<a name="l21"><span class="ln">21   </span></a> 
+<a name="l22"><span class="ln">22   </span></a>    @Override 
+<a name="l23"><span class="ln">23   </span></a>    </span><span class="s0">protected void </span><span class="s1">onMeasure(</span><span class="s0">final int </span><span class="s1">widthMeasureSpec</span><span class="s0">, final int </span><span class="s1">heightMeasureSpec) { 
+<a name="l24"><span class="ln">24   </span></a>        </span><span class="s0">final </span><span class="s1">Drawable d = </span><span class="s0">this</span><span class="s1">.getDrawable()</span><span class="s0">;</span><span class="s1"> 
+<a name="l25"><span class="ln">25   </span></a> 
+<a name="l26"><span class="ln">26   </span></a>        </span><span class="s0">if </span><span class="s1">(d != </span><span class="s0">null</span><span class="s1">) { 
+<a name="l27"><span class="ln">27   </span></a>            </span><span class="s3">// ceil not round - avoid thin vertical gaps along the left/right edges</span><span class="s1"> 
+<a name="l28"><span class="ln">28   </span></a>            </span><span class="s0">final int </span><span class="s1">width = View.MeasureSpec.getSize(widthMeasureSpec)</span><span class="s0">;</span><span class="s1"> 
+<a name="l29"><span class="ln">29   </span></a>            </span><span class="s0">final int </span><span class="s1">height = (</span><span class="s0">int</span><span class="s1">) Math.ceil(width * (</span><span class="s0">float</span><span class="s1">) d.getIntrinsicHeight() / d.getIntrinsicWidth())</span><span class="s0">;</span><span class="s1"> 
+<a name="l30"><span class="ln">30   </span></a>            </span><span class="s0">this</span><span class="s1">.setMeasuredDimension(width</span><span class="s0">, </span><span class="s1">height)</span><span class="s0">;</span><span class="s1"> 
+<a name="l31"><span class="ln">31   </span></a>        } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l32"><span class="ln">32   </span></a>            </span><span class="s0">super</span><span class="s1">.onMeasure(widthMeasureSpec</span><span class="s0">, </span><span class="s1">heightMeasureSpec)</span><span class="s0">;</span><span class="s1"> 
+<a name="l33"><span class="ln">33   </span></a>        } 
+<a name="l34"><span class="ln">34   </span></a>    } 
+<a name="l35"><span class="ln">35   </span></a>} 
+<a name="l36"><span class="ln">36   </span></a></span></pre>
+</body>
+</html>

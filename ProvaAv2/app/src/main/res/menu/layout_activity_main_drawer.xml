@@ -4,11 +4,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/btnLista"
-            android:icon="@drawable/ic_action_video_list"
+            android:icon="@drawable/ic_listar"
             android:title="@string/btnLista" />
         <item
             android:id="@+id/btnCad"
-            android:icon="@drawable/ic_action_add_serie"
+            android:icon="@drawable/ic_add_edicao"
             android:title="@string/btnCad" />
     </group>
 

@@ -1,10 +1,16 @@
 package br.com.wgbn.provaav2;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,9 +21,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import br.com.wgbn.provaav2.Fragments.CadastrarFragment;
 import br.com.wgbn.provaav2.Fragments.ListarFragment;
+import br.com.wgbn.provaav2.Fragments.LoginDialogFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,7 +50,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentManager = getSupportFragmentManager();
         mContents = (FrameLayout)findViewById(R.id.contents);
 
-        //fragmentManager.beginTransaction();
+        if (savedInstanceState == null){
+            Fragment listar = ListarFragment.getInstance();
+            fragmentManager.beginTransaction().replace(R.id.contents, listar).commit();
+            // login dialog
+            showLogin();
+        }
+
+    }
+
+    private void showLogin(){
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        Fragment prev = getSupportFragmentManager().findFragmentByTag("dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        ft.addToBackStack(null);
+
+        // Create and show the dialog.
+        DialogFragment newFragment = new LoginDialogFragment();
+        newFragment.setCancelable(false);
+        newFragment.show(ft, "dialog");
     }
 
     @Override
@@ -70,7 +98,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.btnToast) {
+            Toast.makeText(this, "Exibindo um toast!", Toast.LENGTH_LONG).show();
             return true;
         }
 
@@ -84,10 +113,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.btnLista) {
-            Fragment listar = new ListarFragment();
+            Fragment listar = ListarFragment.getInstance();
             fragmentManager.beginTransaction().replace(R.id.contents, listar).commit();
         } else if (id == R.id.btnCad) {
-            Fragment cadastrar = new CadastrarFragment();
+            Fragment cadastrar = new CadastrarFragment(); //CadastrarFragment.getInstance();
             fragmentManager.beginTransaction().replace(R.id.contents, cadastrar).commit();
         }
 
@@ -95,4 +124,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

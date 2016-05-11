@@ -13,4 +13,18 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Olá fragmento em branco</string>
+    <string name="btnCadCancelar">Cancelar</string>
+    <string name="btnCadSalvar">Salvar</string>
+    <string name="txtUsuario">Usuário</string>
+    <string name="txtSenha">Senha</string>
+    <string name="chkLembrar">Lembre-se de mim</string>
+    <string name="btnLoginCancelar">Cancelar</string>
+    <string name="btnLoginEntrar">Entrar</string>
+    <string name="lblLoginTitulo">Logar</string>
+    <string name="txtTitulo">Título</string>
+    <string name="txtSubtitulo">Subtítulo</string>
+    <string name="txtNumero">Número da edição</string>
+    <string name="txtAno">Ano de publicação</string>
+    <string name="txtEditora">Editora</string>
+    <string name="txtCapa">Imagem de capa</string>
 </resources>

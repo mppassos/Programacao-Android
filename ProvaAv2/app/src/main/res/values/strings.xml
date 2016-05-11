@@ -12,4 +12,18 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnCadCancelar">Cancel</string>
+    <string name="btnCadSalvar">Save</string>
+    <string name="txtUsuario">User</string>
+    <string name="txtSenha">Password</string>
+    <string name="chkLembrar">Remember me</string>
+    <string name="btnLoginCancelar">Cancel</string>
+    <string name="btnLoginEntrar">Enter</string>
+    <string name="lblLoginTitulo">Login</string>
+    <string name="txtTitulo">Title</string>
+    <string name="txtSubtitulo">Subtitle</string>
+    <string name="txtNumero">#Issue</string>
+    <string name="txtAno">Published year</string>
+    <string name="txtEditora">Publisher</string>
+    <string name="txtCapa">Cover image</string>
 </resources>

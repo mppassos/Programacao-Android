@@ -17,11 +17,10 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <com.makeramen.roundedimageview.RoundedImageView
+        <br.com.wgbn.provaav2.CapaImageView
             android:id="@+id/imgCapa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
             app:riv_corner_radius_bottom_left="0dp"
             app:riv_corner_radius_bottom_right="0dp"
             app:riv_corner_radius_top_left="3dp"
@@ -31,18 +30,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:textStyle="bold"
             android:id="@+id/lblTitulo"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/lblNumero"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="italic"
             android:id="@+id/lblSubTitulo"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:textColor="@color/colorAccent"
             android:id="@+id/lblAno"/>
 
     </LinearLayout>
