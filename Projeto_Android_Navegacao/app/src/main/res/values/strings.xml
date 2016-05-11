@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Projeto_Android_Navegacao</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="opcoes">
+        <item>Agendamentos</item>
+        <item>Consultas</item>
+        <item>Outros</item>
+    </string-array>
+    <string-array name="secoesAgendamento">
+        <item>Solicitar</item>
+        <item>Acompanhar</item>
+        <item>Cancelar</item>
+    </string-array>
+    <string-array name="secoesOutros">
+        <item>Contato</item>
+        <item>Sair</item>
+    </string-array>
+
+    <array name="cores_bg">
+        <item>#FF0000</item>
+        <item>#FFF000</item>
+        <item>#0000FF</item>
+    </array>
+    <array name="cores_texto">
+        <item>#F44336</item>
+        <item>#4CAF50</item>
+        <item>#03A9F4</item>
+    </array>
+
+    <string name="title_activity_primeiro_nivel_fragment">PrimeiroNivelFragment</string>
+    <string name="title_activity_tela_atividade_agendamento">TelaAtividadeAgendamento</string>
+    <string name="title_activity_tela_atividade_consulta">TelaAtividadeConsulta</string>
+    <string name="title_activity_tela_atividade_outros">TelaAtividadeOutros</string>
+
+</resources>

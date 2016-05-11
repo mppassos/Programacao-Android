@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/atividade_principal.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/src/main/res/menu/atividade_principal.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_consulta.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_consulta.xml"
+    },
+    {
+        "merged": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_agendamento.xml",
+        "source": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_agendamento.xml"
+    },
+    {
+        "merged": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/primeiro_nivel.xml",
+        "source": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/src/main/res/menu/primeiro_nivel.xml"
+    },
+    {
+        "merged": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_outros.xml",
+        "source": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_outros.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_outros.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_outros.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/primeiro_nivel.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/src/main/res/menu/primeiro_nivel.xml"
+    },
+    {
+        "merged": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_consulta.xml",
+        "source": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_consulta.xml"
+    },
+    {
+        "merged": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/atividade_principal.xml",
+        "source": "/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/src/main/res/menu/atividade_principal.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/res/merged/debug/menu/tela_atividade_agendamento.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/src/main/res/menu/tela_atividade_agendamento.xml"
+    }
+]
