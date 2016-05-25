@@ -10,8 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class PrimeiroNivelFragment extends Fragment //implements View.OnClickListener
-{
+public class PrimeiroNivelFragment extends Fragment implements View.OnClickListener{
 
 	private static final String EXTRA_TIPO = "mTipo";
 	private String mTipo;
@@ -25,7 +24,7 @@ public class PrimeiroNivelFragment extends Fragment //implements View.OnClickLis
 		return f;
 	}
 	
-	/*@Override
+	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		mAcoes = new LinkedHashMap<String, Class>();
@@ -33,7 +32,7 @@ public class PrimeiroNivelFragment extends Fragment //implements View.OnClickLis
 		mAcoes.put(opcoes[0], TelaAtividadeAgendamento.class);
 		mAcoes.put(opcoes[1], TelaAtividadeConsulta.class);
 		mAcoes.put(opcoes[2], TelaAtividadeOutros.class);
-	}*/
+	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -44,12 +43,12 @@ public class PrimeiroNivelFragment extends Fragment //implements View.OnClickLis
 	    return layout;
 	}
 	
-	/*@Override
+	@Override
 	public void onClick(View v) {
 		Class classe = mAcoes.get(mTipo);
 		startActivity(new Intent(getActivity(), classe));
 		
-	}*/
+	}
 
 
 

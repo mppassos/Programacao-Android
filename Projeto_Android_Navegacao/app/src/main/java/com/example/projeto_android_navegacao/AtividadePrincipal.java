@@ -1,6 +1,5 @@
 package com.example.projeto_android_navegacao;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -74,12 +73,12 @@ public class AtividadePrincipal extends ActionBarActivity implements AdapterView
 		mDrawerToggle.syncState();
 	}
 	
-	/*@Override
+	@Override
 	public void onConfigurationChanged(Configuration newConfig){
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
-	*/
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -97,27 +96,9 @@ public class AtividadePrincipal extends ActionBarActivity implements AdapterView
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            //exibirItem(position);
-		switch(position){
-			case 0 :{
-				Intent i = new Intent(AtividadePrincipal.this, TelaAtividadeAgendamento.class);
-				startActivity(i);
-				break;
-			}
-			case 1 :{
-				Intent i = new Intent(AtividadePrincipal.this, TelaAtividadeConsulta.class);
-				startActivity(i);
-				break;
-			}
-			case 2 :{
-				Intent i = new Intent(AtividadePrincipal.this, TelaAtividadeOutros.class);
-				startActivity(i);
-				break;
-			}
-
-		}
-		mDrawerLayout.closeDrawer(mDrawerList);
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+            exibirItem(position);		
 	}
 	
 	private void exibirItem(int position){

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Projeto_Android_Fragments</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_hotel_detalhe_fragment">HotelDetalheFragment</string>
+    <string name="title_activity_hotel_detalhe_atividade">HotelDetalheAtividade</string>
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_novo">Novo</string>
+    <string name="acao_info">Informações</string>
+    <string name="hint_busca">Procurar por Hotel</string>
+    <string name="sobre_titulo">Faculdade SENAI - CIMATEC</string>
+    <string name="sobre_mensagem">Exemplo sobre Dialog</string>
+    <string name="sobre_botao_site">Portal senai</string>
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="classificacao">Classificação</string>
+</resources>

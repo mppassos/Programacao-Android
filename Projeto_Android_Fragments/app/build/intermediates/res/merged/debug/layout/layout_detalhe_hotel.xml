@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="br.ba.senai.android.atividades.HotelDetalheFragment" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOME do HOTEL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtNome"
+        />
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtEndereco"
+        />
+     <RatingBar 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/rtbestrelas"
+         android:stepSize="0.5"
+         android:numStars="5"
+         android:isIndicator="true"
+         android:layout_gravity="center_horizontal"
+         />
+     
+</LinearLayout>

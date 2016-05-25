@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.ba.senai.android.atividades"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="br.ba.senai.android.atividades.AtividadePrincipal"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.ba.senai.android.atividades.HotelDetalheFragment"
+            android:label="@string/title_activity_hotel_detalhe_fragment" >
+        </activity>
+        <activity
+            android:name="br.ba.senai.android.atividades.HotelDetalheAtividade"
+            android:label="@string/title_activity_hotel_detalhe_atividade"
+            android:parentActivityName="br.ba.senai.android.atividades.AtividadePrincipal" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AtividadePrincipal" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/build/intermediates/res/merged/debug/menu/hotel_detalhe_atividade.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/src/main/res/menu/hotel_detalhe_atividade.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/build/intermediates/res/merged/debug/menu/hotel_detalhe.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/src/main/res/menu/hotel_detalhe.xml"
+    },
+    {
+        "merged": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/build/intermediates/res/merged/debug/menu/atividade_principal.xml",
+        "source": "/home/andre/AndroidStudioProjects/Projeto_Android_Fragments/app/src/main/res/menu/atividade_principal.xml"
+    }
+]

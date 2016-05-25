@@ -2,46 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jar="/home/andre/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_ce478c4f7a554fdc73e7bad068c7f3ebe5f24b84.jar" />
+        revision="23.0.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3_d7c00e0d24bcc951b36c31c3ce15908e6477592c.jar" />
     </item>
     <item
-        jar="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jar="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
-        revision="23.0.3"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_dedd0c77eddef86e81c14514e05d1817f5282fd8.jar" />
+        revision="23.0.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3_0d3ba3cf3a56c26c4fbe6f85a12488292db4865a.jar" />
     </item>
     <item
-        jar="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jar="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_91cadf2856afed09c007eb0996ac52efa2b66b10.jar" />
+        revision="23.0.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_a39e9b150f43f1076932b38f75ea71c5b23ced52.jar" />
     </item>
     <item
-        jar="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jar="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_bcda67ebb11df63c3e5ad0909e60242ebc1058bf.jar" />
-    </item>
-    <item
-        jar="/programas/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_3c27d7ddc69390d5e2963af72621280493baf7e9.jar" />
-    </item>
-    <item
-        jar="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="/home/walter/workspace_android/Programacao-Android/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_f13e4689c9b08705589c0a406a95af4479cb1d8b.jar" />
+        revision="23.0.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/andre/AndroidStudioProjects/Projeto_Android_Navegacao/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-21.0.3_defe51dd8314ce8ee8dded7b4b260d8f11fe8125.jar" />
     </item>
 
 </items>

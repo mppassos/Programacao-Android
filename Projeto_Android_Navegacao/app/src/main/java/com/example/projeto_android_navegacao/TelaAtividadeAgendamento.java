@@ -1,33 +1,16 @@
 package com.example.projeto_android_navegacao;
 
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class TelaAtividadeAgendamento extends ActionBarActivity {
 
-	ViewPager mViewPager;
-	SlidingTabLayout mSlidingTabLayout;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_tela_atividade_agendamento);
-
-		setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
-
-		AbasPagerAdapter pagerAdapter = new AbasPagerAdapter(this, getSupportFragmentManager());
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-		mViewPager = (ViewPager)findViewById(R.id.pager);
-		mViewPager.setAdapter(pagerAdapter);
-
-		mSlidingTabLayout = (SlidingTabLayout)findViewById(R.id.tabs);
-		mSlidingTabLayout.setDistributeEvenly(true);// abas de mesmo tamanho
-		mSlidingTabLayout.setViewPager(mViewPager);
 	}
 
 	@Override
